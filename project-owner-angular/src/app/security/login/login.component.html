@@ -1,0 +1,14 @@
+<div class="login-page">
+    <div class="form">
+        <form class="login-form"[formGroup]="userForm">
+            <input type="text" placeholder="username" formControlName="email"/> <br>
+            <input type="password" placeholder="password" formControlName="password"/> <br> &nbsp;
+            <button (click)="onsubmit()" class="button">login</button> <br> &nbsp;
+            <p class="message" style="color: black;">Not registered? 
+                <a style="color: black;" [routerLink]='["/signup"]'>Click here..</a></p>
+        </form>
+    </div>
+</div>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
