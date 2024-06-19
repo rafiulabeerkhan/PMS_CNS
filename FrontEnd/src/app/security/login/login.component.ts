@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/model/user';
+
 import { UserServiceService } from 'src/app/services/user-service.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-login',
@@ -26,7 +28,10 @@ export class LoginComponent implements OnInit{
       this.userService.saveUser(val);
       const user = this.userService.getUser();
       console.log(user.userId);
+      Swal.fire("Logged in Successfully!!")
       this.router.navigateByUrl("/listProject");
+
     })
   }
+  
 }

@@ -31,7 +31,7 @@ public class JasperExportService {
         JasperPrint print = JasperFillManager.fillReport(jasperReport,map,dataSource);
         if (format.equalsIgnoreCase("pdf")){
 //            JasperExportManager.exportReportToPdfFile(print,"C:\\Users\\ZAHID\\Desktop\\jasper\\project-report.pdf");
-            JasperExportManager.exportReportToPdfFile(print,"D:\\OfficeAssignment\\SimpleProjectManagemen\\Jasper\\project-report.pdf");
+            JasperExportManager.exportReportToPdfFile(print,"G:\\project\\PMS_CNS\\Jasper\\project-report.pdf");
         }
         return "Report Generated..";
     }
@@ -45,7 +45,7 @@ public class JasperExportService {
         map.put("id", id);
         JasperPrint print = JasperFillManager.fillReport(jasperReport,map,dataSource);
         if (format.equalsIgnoreCase("pdf")){
-            JasperExportManager.exportReportToPdfFile(print,"D:\\OfficeAssignment\\SimpleProjectManagemen\\Jasper\\project-report.pdf");
+            JasperExportManager.exportReportToPdfFile(print,"G:\\project\\PMS_CNS\\Jasper\\project-report.pdf");
 //            JasperExportManager.exportReportToPdfFile(print,"C:\\Users\\User\\Desktop\\report\\project-report.pdf");
         }
         return "Report Generated..";

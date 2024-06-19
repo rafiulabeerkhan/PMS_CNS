@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { ProjectServiceService } from 'src/app/services/project-service.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add',
@@ -33,6 +34,7 @@ export class AddComponent implements OnInit {
 
   onsubmit() {
     this.projectService.addData(this.projectForm.value).subscribe((val: any) => {
+      Swal.fire("Added Successfully");
       this.router.navigateByUrl("/listProject");
     });
   }
